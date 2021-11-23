@@ -17,6 +17,7 @@
             flex-direction: column;
             .text-center{
                 width: 100%;
+                display: none;
                 margin-bottom: 25rem;
                 max-width: 60rem;
                 text-align: center;
@@ -36,6 +37,9 @@
                     padding: 1rem 2rem;
                     text-transform: uppercase;
                     border: 2px solid rgba(219, 200, 30, 0.774);
+                }
+                &.active{
+                    display: block;
                 }
             }
             .main-bottom{
@@ -70,6 +74,7 @@
                 }
                 .download{
                     width: 100%;
+                    position: relative;
                     align-self: flex-end;
                     padding-bottom: 1rem;
                     max-width: 50rem;
@@ -113,6 +118,7 @@
                     }
                     .progresso{
                         width: 100%;
+                        max-width: 50rem;
                         margin-top: 1rem;
                         height: 2rem;
                         border-radius: 0.2rem;
@@ -120,15 +126,55 @@
                         &::after{
                             content: "";
                             position: absolute;
-                            width: 15%;
+                            width: 100%;
+                            max-width: 5rem;
                             height: 2rem;
                             background-color: #0cb6d4;
                         }
                         &.meio::after{
-                            width: 20%;
+                            max-width: 25rem;
                         }
                         &.fim::after{
-                            width: 50%;
+                            max-width: 50rem;
+                        }
+                    }
+                    .instalar{
+                        background-color: #0cb6d4;
+                        padding: 1.5rem 8rem;
+                        top: 50%;
+                        left: 50%;
+                        transform:translate(-50%, -50%);
+                        position: absolute;
+                        transition: all .3s;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        display: none;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            color: rgb(31, 31, 31);
+                            h6{
+                                font-size: 1.8rem;
+                            }
+                            span{
+                                font-weight: bold;
+                                font-size: 1.4rem;
+                            }
+                        }
+                        &.active{
+                            display: flex;
+                        }
+                    }
+                    &.active{
+                        align-self: center;
+                        .text-download{
+                            display: none;
+                        }
+                        .progresso{
+                            display: none;
                         }
                     }
                 }

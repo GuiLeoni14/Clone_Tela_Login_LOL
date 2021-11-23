@@ -1,5 +1,6 @@
 const numeroInicial = document.getElementById("number-primary");
 const progresso = document.querySelector(".progresso");
+const textoCentral = document.getElementById("texto-central");
 
 setInterval(() => {
     if ((Number(numeroInicial.textContent)) <= 2800){
@@ -9,6 +10,9 @@ setInterval(() => {
         }
         if((Number(numeroInicial.textContent)) >= 2000){
             progresso.classList.add('fim')
+        }
+        if ((Number(numeroInicial.textContent)) >= 2800){
+            textoCentral.classList.add('active');
         }
     }    
     // if (Number(count.textContent) == 3){
