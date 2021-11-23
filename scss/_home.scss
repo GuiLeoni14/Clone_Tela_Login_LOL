@@ -177,11 +177,26 @@
                             display: none;
                         }
                         .instalar{
+                            cursor: pointer;
                             display: flex;
+                            animation: pulsar infinite .8s;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+
+@keyframes pulsar{
+    0%{
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
     }
 }
